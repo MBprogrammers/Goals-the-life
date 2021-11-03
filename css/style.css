@@ -1,0 +1,206 @@
+:root {
+  --main-color: #3498db;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding-bottom: 100px;
+}
+
+.container {
+  width: 70%;
+  margin-top: 40px;
+}
+
+.container .title {
+  padding: 20px;
+  text-align: center;
+  background-color: #444;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  color: white;
+  border-radius: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.info > div img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.info > div img:hover {
+  border: 3px solid var(--main-color);
+}
+
+.info > div p {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.goals {
+  margin-top: 100px;
+}
+
+.goals > .name {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.goals .scope {
+  margin-bottom: 50px;
+  height: 105px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.goals .scope.open {
+  overflow: visible;
+}
+
+.goals .title-goal {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.goals .title-goal .fa {
+  font-size: 18px;
+  margin-bottom: 0;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.goals .title-goal h2 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.goals .title-goal p {
+  margin-top: 0;
+}
+
+.goals .scope .progres {
+  width: 300px;
+  height: 10px;
+  background-color: #999;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.goals .scope .progres span {
+  height: 100%;
+  background-color: var(--main-color);
+  display: block;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+}
+
+.goals .scope .progres span::after {
+  content: attr(data-progres);
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  top: 50%;
+  right: -50px;
+  background-color: var(--main-color);
+  transform: translateY(-50%);
+}
+
+.goals .scope .content {
+  background-color: #666;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.goals .scope .content ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: white;
+}
+
+.goals .scope .content ul li {
+  width: 200px;
+  padding: 8px;
+  padding-left: 15px;
+  background-color: #444;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.goals .scope .content ul li.done {
+  background-color: var(--main-color);
+}
+
+.scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.scroll img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.scroll img:hover {
+  border: 2px solid var(--main-color);
+}
